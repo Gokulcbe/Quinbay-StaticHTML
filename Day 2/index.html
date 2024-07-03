@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        .inputf {
+            width: 100%;
+            height: 10%;
+        }
+        .inputf input {
+            width: 90%;
+            height: 40px;
+            margin-bottom: 5%;
+        }
+    </style>
+
+<header>
+    <div class="headercontainer">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="headerclass">
+                        <img src="../../Downloads/blibli.png" height="30px" alt="No image"/>
+                        <!-- <h2>Inventory Management</h2> -->
+                    </div>
+                    <div class="search">
+                        <input type="text" class="searchbar" id="searchbar" placeholder="Search..."/>
+                        <button class="button button2" onclick="search()">Search</button>
+                    </div>
+                </div>
+                <!-- <div class="profile">
+                    <img src="../../Downloads/usericon.png" height="30px" alt="Profile Logo"/>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</header>
+
+    <main>
+        <div class="left">
+            <div>
+                <h1>Add Product details</h1>
+                <hr class="divider">
+                <div >
+                    <form id="productForm">
+                        <div class="inputf">
+                            <input type="text" class="addmobile" id="productName" name="product_name" placeholder="Product Name"><br>
+                        </div>
+                        <div class="inputf">
+                            <input type="text" id="productCategory" name="product_category" placeholder="Product Category"><br>
+                        </div>
+                        <div class="inputf">
+                            <input type="number" id="productStock" name="product_stock" placeholder="Product Stock"><br>
+                        </div>
+                        <div class="inputf">
+                            <input type="number" id="productPrice" name="product_price" placeholder="Product Price"><br>
+                        </div>
+                        <div class="inputf">
+                            <input type="text" id="productSeller" name="product_seller" placeholder="Product Seller"><br>
+                        </div>
+                    </form>
+                    <button class="button button2" onclick="addProduct()">Add Product</button>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <h1>Available Products</h1>
+            <button class="avail">Available Stock</button>
+            <input type="text" class="min" placeholder="min">
+            <input type="text" class="min" placeholder="max">
+            <button class="availfilter">Filter</button>
+            <hr class="divider">
+                <div class="cards" id="productCards">
+            </div>
+            
+            
+        </div>
+        <div class="cartsection">
+            <h3>Shopping Cart</h3>
+            <div class="cards" id="cartCards"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <h4>This site is copyrighted @2024</h4>
+            <h5>All rights reserved to Quinbay</h5>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
